@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/* Create variable for button color */
+:root {
+  --buttonColor:  hsl(360, 91%, 36%);
+  /* --buttonColor:  hsl(251, 91%, 36%); */
+}
+
 html,
 body,
 .wrapper {
@@ -74,7 +80,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: var(--buttonColor);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -118,11 +124,13 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* reduce font size and adding margin,padding for smaller screens */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
+    /* background-color: green; */
   }
 
   #password {
@@ -130,8 +138,14 @@ button[disabled] {
   }
 }
 
+/* reduce font size on button and password text for smaller screens */
 @media (max-width: 500px) {
   .btn {
+    font-size: 0.8rem;
+    /* background-color: blue; */
+  }
+
+  #password {
     font-size: 0.8rem;
   }
 }
