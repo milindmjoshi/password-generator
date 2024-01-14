@@ -41,7 +41,7 @@ function generatePassword(){
   // Get password length and validate. Return if invalid length
   var length = prompt("Please enter password length. Length must be at least 8 and no more than 128 characters");
   if (!(length >= 8 && length <= 128)){
-    alert ("Invalid password length selected");
+    alert ("Invalid password length entered. Length must be at least 8 and no more than 128 characters ");
     return;
   }
   console.log("Length:" + length);
