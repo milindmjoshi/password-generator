@@ -1,6 +1,6 @@
 // Assignment Code
 
-// Initialize arrays of upper case alpha, lower case alpha, special characters, adn numeric char.
+// Initialize arrays of upper case alpha, lower case alpha, special characters, and numeric char.
 // PasswordChar Array is empty and will be added to as user is prompted for types of characters to use
 var alphaUpperArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var alphaLowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -38,7 +38,7 @@ generateBtn.addEventListener("click", writePassword);
 // Generate password function
 function generatePassword(){
   var password = "";
-  // Get password length and validate
+  // Get password length and validate. Return if invalid length
   var length = prompt("Please enter password length. Length must be at least 8 and no more than 128 characters");
   if (!(length >= 8 && length <= 128)){
     alert ("Invalid password length selected");
@@ -90,6 +90,8 @@ function generatePassword(){
 
   //console.log("Password Char Array: " + passwordCharArray);
   
+  /* For the password length desired, get random characters from the password char array and append
+     to password.  */
   for (var i=0;i<length;i++){
       var char = randomChar();
       //console.log("Random password char: " + char);
